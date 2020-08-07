@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+
+a {
+  text-decoration: none;
+}
+
+/*Navbar*/
+.nav {
+  background-color: #8b0000;
+}
+.btn-outline-danger {
+  background-color: #f00000;
+}
+.btn-outline-danger:hover {
+  background-color: #8b0000;
+}
+/*End of Navbar*/
+
+.background-img {
+  height: 100vh;
+  background-image: url(images/4.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+}
+.banner {
+  position: relative;
+  height: 100vh;
+}
+.banner-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(0px);
+}
+.header-text {
+  color: #8b0000;
+  font-weight: bolder;
+  font-size: 6vw;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 5px;
+  animation-name: anim;
+  animation-duration: 2s;
+}
+
+.header-p {
+  color: #fff;
+  margin-top: 20%;
+  font-weight: bold;
+  font-size: 4vw;
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+/*End of Banner*/
+@keyframes anim {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .background-img {
+    height: 100vh;
+  }
+  .banner {
+    height: 100vh;
+  }
+}
+@media (max-width: 400px) {
+  .background-img {
+    height: 100vh;
+  }
+  .banner {
+    height: 100vh;
+  }
+}
+
+/*Banner*/
+
+/*About Us*/
+.aboutus p,
+h1 {
+  margin-top: 50px;
+  font-family: "Recursive", sans-serif;
+  text-align: left;
+}
+
+.logo-img,
+.aboutus-text {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+.fromLeft {
+  display: block;
+  animation-name: fromLeft;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+}
+.fromRight {
+  display: block;
+  animation-name: fromRight;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+}
+.fromTop {
+  animation-name: fromTop;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fromRight {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fromTop {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*End of about Us*/
+
+/*How will we work*/
+/*SECTION TITLE */
+.section-title h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.section-title p {
+  margin-top: 20px;
+}
+/*END OF SECTION TITLE */
+
+.divider-circle {
+  width: 200px;
+  border: 1px solid #8b0000;
+  opacity: 0.8;
+  position: relative;
+  display: inline-block;
+}
+
+.divider-circle:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #8b0000;
+  top: -9px;
+  opacity: 0.8;
+  transform: rotate(45deg);
+}
+.divider-circle:after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #8b0000;
+  top: -9px;
+  left: 45%;
+  opacity: 0.8;
+  transform: rotate(45deg);
+}
+/* 8. HELPING PROCESS SECTION */
+
+.process-wrap {
+  border-top: 2px solid #8b0000;
+}
+
+.process-circle {
+  width: 40px;
+  height: 40px;
+  background: #8b0000;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  position: relative;
+  border-radius: 50%;
+  margin-top: -20px;
+  border: 3px solid #fff;
+  color: #fff;
+  line-height: 35px;
+  font-size: 20px;
+  text-align: center;
+}
+.m-15 {
+  margin-bottom: 15px;
+  /* margin-top: 15px;*/
+}
+
+.process-circle p {
+  margin: 0px;
+}
+
+.process-circle:before {
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  background: #8b0000;
+  content: "";
+  bottom: -10px;
+
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%) translateY(0) translateZ(0) rotate(0deg) scale(1);
+}
+.process-item:hover .process-circle:before {
+  height: 70px;
+  bottom: -70px;
+}
+.process-item .icon-outer {
+  display: inline-table;
+  width: 120px;
+  height: 120px;
+
+  transition: all 0.4s ease-in-out;
+  background-color: #ffffff;
+  box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.15);
+
+  color: #8b0000;
+  line-height: 120px;
+  font-size: 40px;
+}
+.process-item:hover .icon-outer {
+  background-color: #8b0000;
+  color: #ffffff;
+  box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.15);
+}
+.process-item {
+  position: relative;
+  z-index: 1;
+}
+.process-item h4 {
+  margin-bottom: 0px;
+}
+
+/*End of How will we work*/
+
+/*Why are we helping*/
+.overlay {
+  position: relative;
+}
+.overlay:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+}
+
+/*  6. VIDEO SECTION */
+.promo-video {
+  color: #fff;
+}
+
+.parallax {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*How are we helping*/
+
+/*Donate*/
+.donate {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(images/donate.jpg) no-repeat center center / cover;
+}
+
+.donate-div {
+  padding-top: 15%;
+}
+
+.donate-cards-div {
+  margin-top: 30%;
+}
+
+.donate-card-group {
+  padding: 0px 10%;
+}
+.dark-bg {
+  background-color: black;
+}
+/*Div btn*/
+a.button5 {
+  display: inline-block;
+  padding: 0.46em 1.6em;
+  border: 0.1em solid #000000;
+  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #eee;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+  text-align: center;
+  transition: all 0.15s;
+}
+a.button5:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+/*Div btn*/
+.email-btn {
+margin-top: 78px;}
+
+@media (max-width: 768px) {
+  .card-1 {
+    height: 100%;
+    margin-bottom: 20%;
+  }
+   .card-2 {
+    margin-top: 5%;
+  }
+  
+}
+/*End of donate*/
